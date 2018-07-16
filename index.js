@@ -10,7 +10,7 @@ function getExp() {
 
 // evaluates the mathematical expression based on the array
 function evaluate(input){
-    let arr = input.join('').split(' ')
+    const arr = input.join('').split(' ')
     let result
     if(arr[0] === 'add'){
         result = parseInt(arr[1]) + parseInt(arr[2])
@@ -30,8 +30,8 @@ function getInner(arr){
         copy = evaluate(copy)
     }
     else{
-        let portion = copy.slice(start+1, end)
-        let result = evaluate(portion)
+        const portion = copy.slice(start+1, end)
+        const result = evaluate(portion)
         copy.splice(start, end-start+1, result)
     }
     return copy
